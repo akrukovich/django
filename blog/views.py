@@ -14,7 +14,8 @@ from django.views.generic import (
 
 def home(request):
     context = {
-        'posts': Post.objects.all()
+        'posts': Post.objects.all(),
+        'title': 'home'
     }
     return render(request, 'blog/home.html', context)
 
