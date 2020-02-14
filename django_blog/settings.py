@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'a1223141715de3dbc2ac056b057f40342104765440fd8914'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['krukovychknowsbest.herokuapp.com']
 
@@ -135,19 +135,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'anatoliinakrukovich@gmail.com'
-EMAIL_HOST_PASSWORD = 'zazohkitkohtiwpx'
+
 
 AWS_ACCESS_KEY_ID =os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
-# AWS_ACCESS_KEY_ID ='AKIAU3S3MHT6EBODGYAB'
-#
-#
-# AWS_SECRET_ACCESS_KEY='TWqVQBOVjZJoncWvHDuqPnxTskcDWARTvdcq863w'
-#
-#
-# AWS_STORAGE_BUCKET_NAME='krukovich-knows-best-files'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
